@@ -1,0 +1,24 @@
+<!-- views/home.ejs -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Welcome to our Website</title>
+</head>
+
+<body>
+    <h1>Welcome to Our Website</h1>
+
+    <% if (user) { %>
+        <p>Hello <%= user.username %>! You are already logged in.</p>
+        <a href="/protected">Visit Protected Page</a>
+        <br>
+        <a href="/logout">Logout</a>
+        <% } else { %>
+            <p>You are not logged in. Please login to access the protected page.</p>
+            <a href="/login">Login</a>
+            <% } %>
+</body>
+
+</html>
